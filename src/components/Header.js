@@ -9,8 +9,4 @@ const Header = ({title}) => {
   )
 }
 
-Button.defaultProps = {
-    color: 'steelblue'
-}
-
 export default Header
