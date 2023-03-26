@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types'
+import { useState } from 'react'
 
 const Button = ({ color, text }) => {
-  const onClick = (e) => {
-    console.log('click');
-  }
-  
-    return (
-    <button onClick={onClick} style = {{ backgroundColor: color }} className='btn'>{text}</button>
-  )
+    const [count, setCount] = useState(0);
+
+    function handleClick() {
+        setCount(count + 1);
+    }
+
+    return (<button onClick={handleClick} style = {{ backgroundColor: color }} className='btn'>Clicked {count} times</button>)
 }
 
 Button.defaultProps = {
